@@ -7,7 +7,9 @@
     "setup:dev": "env-cmd -f .env cross-env-shell serverless config credentials --provider aws -o --key '$AWS_TOKEN' --secret '$AWS_SECRET' --profile '$AWS_PROFILE'",
     "build": "env GOOS=linux GOARCH=amd64  go build  -o bin/goserverlesslambda .",
     "deploy:dev": "env-cmd -f .env cross-env-shell serverless deploy  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
-    "deploy:prod": "env-cmd -f .env cross-env-shell serverless deploy --stage production  --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'"
+    "deploy:prod": "env-cmd -f .env cross-env-shell serverless deploy --stage production  --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
+    "delete:dev": "env-cmd -f .env cross-env-shell serverless remove  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
+    "delete:prod": "env-cmd -f .env cross-env-shell serverless remove  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'"
   },
   "repository": {
     "type": "git",
