@@ -9,7 +9,7 @@
     "deploy:dev": "env-cmd -f .env cross-env-shell serverless deploy  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
     "deploy:prod": "env-cmd -f .env cross-env-shell serverless deploy --stage production  --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
     "delete:dev": "env-cmd -f .env cross-env-shell serverless remove  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'",
-    "delete:prod": "env-cmd -f .env cross-env-shell serverless remove  --stage development --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'"
+    "delete:prod": "env-cmd -f .env cross-env-shell serverless remove  --stage production --aws-profile '$AWS_PROFILE' --region '$AWS_REGION'"
   },
   "repository": {
     "type": "git",
